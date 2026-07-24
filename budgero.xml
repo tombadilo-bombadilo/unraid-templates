@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Budgero</Name>
+  <Repository>budgero/budgero</Repository>
+  <Registry>https://hub.docker.com/r/budgero/budgero</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/tombadilo-bombadilo/budgero/issues</Support>
+  <Project>https://budgero.app/</Project>
+  <Overview>Budgero is a source-available, end-to-end encrypted zero-based budgeting app in the YNAB mold — manual-first entry with rule-based automation, multi-currency support, and YNAB/CSV import. Ships as a single Go binary with SQLite storage and typically runs in under 200MB RAM.
+
+IMPORTANT: set "Allowed sync origins" to the exact origin you open the app from (e.g. http://192.168.1.50:3001 or https://budget.example.com). The sync WebSocket rejects connections from any other origin and the budget will not load. Exact match on scheme/host/port, no wildcards.</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:3001]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/tombadilo-bombadilo/unraid-templates/main/budgero.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/tombadilo-bombadilo/budgero/master/packages/website/public/logo_512.png</Icon>
+  <Config Name="WebUI Port" Target="3001" Default="3001" Mode="tcp" Description="Port for the Budgero web UI and sync WebSocket." Type="Port" Display="always" Required="true" Mask="false">3001</Config>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/budgero" Mode="rw" Description="SQLite database and application data." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/budgero</Config>
+  <Config Name="Allowed sync origins" Target="WEBSOCKET_ALLOWED_ORIGINS" Default="" Mode="" Description="Comma-separated browser origins allowed to connect to sync, e.g. http://192.168.1.50:3001. Required for any non-localhost access — use the exact scheme, host and port you open the app with. No wildcards." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+</Container>

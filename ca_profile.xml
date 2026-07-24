@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<CommunityApplications>
+  <Profile>Templates for Budgero — a source-available, end-to-end encrypted zero-based budgeting app. Manual-first entry with rule-based automation, multi-currency support, and YNAB/CSV import. Single Go binary with SQLite storage. Maintained by the Budgero developer — support and bug reports via GitHub Issues.</Profile>
+  <Icon>https://raw.githubusercontent.com/tombadilo-bombadilo/budgero/master/packages/website/public/logo_512.png</Icon>
+  <WebPage>https://budgero.app/</WebPage>
+  <Forum>https://github.com/tombadilo-bombadilo/budgero/issues</Forum>
+</CommunityApplications>
