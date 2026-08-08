@@ -1,6 +1,6 @@
 # Unraid templates for Budgero
 
-Community Apps templates for [Budgero](https://budgero.app/) — a source-available, end-to-end encrypted zero-based budgeting app. These templates are MIT-licensed; Budgero itself is licensed under [FSL-1.1-ALv2](https://github.com/tombadilo-bombadilo/budgero/blob/master/LICENSE).
+Community Apps templates for [Budgero](https://budgero.app/) — an open-source, end-to-end encrypted zero-based budgeting app. These templates are MIT-licensed; Budgero itself is licensed under [AGPL-3.0-only](https://github.com/tombadilo-bombadilo/budgero/blob/master/LICENSE).
 
 ## Install
 
