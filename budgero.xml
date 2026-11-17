@@ -14,8 +14,9 @@ IMPORTANT: set "Allowed sync origins" to the exact origin you open the app from 
   <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:3001]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/tombadilo-bombadilo/unraid-templates/main/budgero.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/tombadilo-bombadilo/budgero/master/packages/website/public/logo_512.png</Icon>
+  <Icon>https://raw.githubusercontent.com/tombadilo-bombadilo/unraid-templates/main/budgero.png</Icon>
   <Config Name="WebUI Port" Target="3001" Default="3001" Mode="tcp" Description="Port for the Budgero web UI and sync WebSocket." Type="Port" Display="always" Required="true" Mask="false">3001</Config>
   <Config Name="Data" Target="/data" Default="/mnt/user/appdata/budgero" Mode="rw" Description="SQLite database and application data." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/budgero</Config>
   <Config Name="Allowed sync origins" Target="WEBSOCKET_ALLOWED_ORIGINS" Default="" Mode="" Description="Comma-separated browser origins allowed to connect to sync, e.g. http://192.168.1.50:3001. Required for any non-localhost access — use the exact scheme, host and port you open the app with. No wildcards." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Login signing key" Target="SELF_HOST_JWT_SECRET" Default="" Mode="" Description="Optional. Any long random string (e.g. from: openssl rand -hex 32). Keeps you logged in across container restarts and updates. If empty, a new key is made on every start and everyone has to log in again." Type="Variable" Display="advanced" Required="false" Mask="true"></Config>
 </Container>
